@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Stick Bros - Ultimate</title>
+  
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div id="game-wrapper">
+    <h1>SUPER STICK BROS</h1>
+    
+    <!-- Link to GitHub -->
+    <a href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY" class="github-btn" target="_blank">
+      View Project on GitHub
+    </a>
+    
+    <!-- Embedded p5.js Game -->
+    <div id="canvas-container">
+      <iframe src="https://editor.p5js.org/johnson.quintero/full/97KpNqL87" allowfullscreen></iframe>
+    </div>
+    
+    <!-- Portfolio Content Information -->
+    <div class="info-container">
+      
+      <!-- Description Section -->
+      <div class="info-section">
+        <h2>Description:</h2>
+        
+        <div class="response-block">
+          <h3>Johnson:</h3>
+          <p>
+            <em>[Johnson, write your explanation of the project's purpose and why you made it here...]</em><br><br>
+            Example: Super Stick Bros - Ultimate Edition was created out of my passion for fast-paced, competitive platform fighters. My primary purpose was to challenge myself to build a robust combat engine with complex bounding-box collisions...
+          </p>
+        </div>
+
+        <div class="response-block">
+          <h3>Hayden:</h3>
+          <p>
+            <em>[Hayden, write your explanation of the project's purpose and why you made it here...]</em><br><br>
+            Example: I wanted to focus on implementing character-specific states, unique ultimate abilities, and visually cinematic elements to make the game feel like a polished local multiplayer experience...
+          </p>
+        </div>
+      </div>
+
+      <!-- Instructions Section -->
+      <div class="info-section">
+        <h2>Instructions:</h2>
+        <p>This is a local 2-player brawler. The objective is to deplete your opponent's health bar. The game supports both gamepad controllers and standard keyboard inputs. If a controller is plugged in, the game will automatically detect it.</p>
+        
+        <div class="controls-panel">
+          <div class="player-controls p1">
+            <h3>PLAYER 1 🎮</h3>
+            <p><span class="btn stick">L-Stick</span> or <span class="btn stick">WASD</span> to Move</p>
+            <p><span class="btn a-btn">A</span> or <strong>W</strong> to Jump / Double Jump</p>
+            <p><span class="btn x-btn">X</span> or <strong>F</strong> to Attack / Lock In</p>
+            <p><span class="btn y-btn">Y</span> or <strong>G</strong> for Ultimate Attack</p>
+            <p><span class="btn trigger">LT/RT</span> or <strong>Q</strong> for Shield (Hold)</p>
+          </div>
+          
+          <div class="player-controls p2">
+            <h3>PLAYER 2 🎮</h3>
+            <p><span class="btn stick">L-Stick</span> or <span class="btn stick">Arrows</span> to Move</p>
+            <p><span class="btn a-btn">A</span> or <strong>Up</strong> to Jump / Double Jump</p>
+            <p><span class="btn x-btn">X</span> or <strong>K</strong> to Attack / Lock In</p>
+            <p><span class="btn y-btn">Y</span> or <strong>L</strong> for Ultimate Attack</p>
+            <p><span class="btn trigger">LT/RT</span> or <strong>M</strong> for Shield (Hold)</p>
+          </div>
+        </div>
+        <p class="kb-tip">Press <strong>P</strong> for Fullscreen Mode | Press <strong>Enter</strong> to Start match from the map select screen.</p>
+      </div>
+
+      <!-- Learning Goals Section -->
+      <div class="info-section">
+        <h2>Learning Goal: Methods</h2>
+        
+        <h3>Method with a Parameter:</h3>
+        <!-- REPLACE THE SRC BELOW WITH YOUR SCREENSHOT -->
+        <img src="parameter-method.png" class="code-screenshot" alt="Screenshot of applyAttack method">
+        <p>
+          The <code>applyAttack(attacker, defender, baseDamage, range, baseKnockback, ignoreLimits, isUlt)</code> method acts as the core mathematical logic handling all combat interactions in our game. It stores the instructions required to calculate Euclidean distances between targets, evaluate character facing orientations, calculate shield mitigations, apply screen-shake impact stops, spawn visual hit-sparks, and subtract health from the defending player object. Creating this method was incredibly useful because it allowed us to write the complex damage and physics knockback logic exactly once. Whenever any character performs a light attack, a projectile hits, or an ultimate ability connects, we simply call this single method, passing in the specific attacker properties and target data as parameters.
+        </p>
+
+        <h3>Method that Returns a Value:</h3>
+        <!-- REPLACE THE SRC BELOW WITH YOUR SCREENSHOT -->
+        <img src="return-method.png" class="code-screenshot" alt="Screenshot of checkWinner method">
+        <p>
+          The <code>checkWinner(p1, p2)</code> method evaluates the current health pools of both player objects to determine the outcome of a match. It stores a brief sequence of conditional checks comparing <code>p1.hp</code> and <code>p2.hp</code> to zero, and it returns an integer value representing the current match state: <code>0</code> (no winner yet), <code>1</code> (Player 2 wins), <code>2</code> (Player 1 wins), or <code>3</code> (Draw). Returning a value was essential here because it allows the main rendering loop to cleanly poll the state of the match. The returned value triggers the global state machine to transition the game from the active "fight" state into the cinematic K.O. phase without cluttering the main logic with redundant health-checking math.
+        </p>
+      </div>
+
+      <!-- LLM Reflection Section -->
+      <div class="info-section">
+        <h2>LLM Assistance Reflection:</h2>
+        
+        <div class="response-block">
+          <h3>Johnson:</h3>
+          <p>
+            <em>[Johnson, write how AI brainstorming or code generation impacted your specific development tasks here...]</em>
+          </p>
+        </div>
+
+        <div class="response-block">
+          <h3>Hayden:</h3>
+          <p>
+            <em>[Hayden, write how AI brainstorming or code generation impacted your specific development tasks here...]</em>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
