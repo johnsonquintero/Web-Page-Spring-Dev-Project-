@@ -14,7 +14,7 @@
     <h1>SUPER STICK BROS</h1>
     
     <!-- Link to GitHub -->
-    <a href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY" class="github-btn" target="_blank">
+    <a href="https://github.com/MCST-CIS/spring-dev-project-invincigoons class="github-btn" target="_blank">
       View Project on GitHub
     </a>
     
@@ -33,16 +33,16 @@
         <div class="response-block">
           <h3>Johnson:</h3>
           <p>
-            <em>[Johnson, write your explanation of the project's purpose and why you made it here...]</em><br><br>
-            Example: Super Stick Bros - Ultimate Edition was created out of my passion for fast-paced, competitive platform fighters. My primary purpose was to challenge myself to build a robust combat engine with complex bounding-box collisions...
+            <em>[I made Super Stick Bros because I love fighting games. I combined my love for fighting games with one of my favorite shows, Invincible, to create a game that me and my partner were proud of. My purpose was to challenge myself by learning new and important systems while also using artificial intelligence to assist me.]</em><br><br>
+            
           </p>
         </div>
 
         <div class="response-block">
           <h3>Hayden:</h3>
           <p>
-            <em>[Hayden, write your explanation of the project's purpose and why you made it here...]</em><br><br>
-            Example: I wanted to focus on implementing character-specific states, unique ultimate abilities, and visually cinematic elements to make the game feel like a polished local multiplayer experience...
+            <em>[I made Super Stick Bros because I was inspired by the new Invincible fighting game that just game out called "Invincible VS". Seeing this game and how cool it was made me want to create my own. My purpose was to create a simplified but just as fun version of Invincible VS with my own unique twist on the game.]</em><br><br>
+            
           </p>
         </div>
       </div>
@@ -79,14 +79,14 @@
         <h2>Learning Goal: Methods</h2>
         
         <h3>Method with a Parameter:</h3>
-        <!-- REPLACE THE SRC BELOW WITH YOUR SCREENSHOT -->
+    
         <img src="parameter-method.png" class="code-screenshot" alt="Screenshot of applyAttack method">
         <p>
           The <code>applyAttack(attacker, defender, baseDamage, range, baseKnockback, ignoreLimits, isUlt)</code> method acts as the core mathematical logic handling all combat interactions in our game. It stores the instructions required to calculate Euclidean distances between targets, evaluate character facing orientations, calculate shield mitigations, apply screen-shake impact stops, spawn visual hit-sparks, and subtract health from the defending player object. Creating this method was incredibly useful because it allowed us to write the complex damage and physics knockback logic exactly once. Whenever any character performs a light attack, a projectile hits, or an ultimate ability connects, we simply call this single method, passing in the specific attacker properties and target data as parameters.
         </p>
 
         <h3>Method that Returns a Value:</h3>
-        <!-- REPLACE THE SRC BELOW WITH YOUR SCREENSHOT -->
+
         <img src="return-method.png" class="code-screenshot" alt="Screenshot of checkWinner method">
         <p>
           The <code>checkWinner(p1, p2)</code> method evaluates the current health pools of both player objects to determine the outcome of a match. It stores a brief sequence of conditional checks comparing <code>p1.hp</code> and <code>p2.hp</code> to zero, and it returns an integer value representing the current match state: <code>0</code> (no winner yet), <code>1</code> (Player 2 wins), <code>2</code> (Player 1 wins), or <code>3</code> (Draw). Returning a value was essential here because it allows the main rendering loop to cleanly poll the state of the match. The returned value triggers the global state machine to transition the game from the active "fight" state into the cinematic K.O. phase without cluttering the main logic with redundant health-checking math.
@@ -100,14 +100,14 @@
         <div class="response-block">
           <h3>Johnson:</h3>
           <p>
-            <em>[Johnson, write how AI brainstorming or code generation impacted your specific development tasks here...]</em>
+            <em>[I used an LLM for both brainstorming and code generation. The AI mostly helps with ideas for maps, tutorial flow, and main functions. It sped up the development process greatly because it allowed my to quickly edit and test code without having to manually fix it myself each and every iteration.]</em>
           </p>
         </div>
 
         <div class="response-block">
           <h3>Hayden:</h3>
           <p>
-            <em>[Hayden, write how AI brainstorming or code generation impacted your specific development tasks here...]</em>
+            <em>[An LLM was used during development to help code main mechanics, refine ideas, and generate cinematics. The AI helped to create UI interactions and gameplay systems that Johnson and I could not have done ourselves. It sped up development a lot and it also helped us to learn that depending solely on AI is not viable. We still had to fix many errors in our code even though lots of it was AI-Generated.]</em>
           </p>
         </div>
       </div>
